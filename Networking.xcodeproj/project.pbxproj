@@ -11,8 +11,10 @@
 		51E315F72AFE975B00B0C386 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E315F62AFE975B00B0C386 /* SceneDelegate.swift */; };
 		51E315FE2AFE975C00B0C386 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51E315FD2AFE975C00B0C386 /* Assets.xcassets */; };
 		51E316012AFE975C00B0C386 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51E315FF2AFE975C00B0C386 /* LaunchScreen.storyboard */; };
-		51E3160D2AFE982E00B0C386 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3160C2AFE982E00B0C386 /* MainViewController.swift */; };
+		51E3160D2AFE982E00B0C386 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3160C2AFE982E00B0C386 /* InfoViewController.swift */; };
 		51E316122AFF653100B0C386 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E316112AFF653100B0C386 /* Rate.swift */; };
+		51E316142B01623400B0C386 /* Nerworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E316132B01623400B0C386 /* Nerworking.swift */; };
+		51E316172B0166D200B0C386 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E316162B0166D200B0C386 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +24,10 @@
 		51E315FD2AFE975C00B0C386 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51E316002AFE975C00B0C386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51E316022AFE975C00B0C386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51E3160C2AFE982E00B0C386 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		51E3160C2AFE982E00B0C386 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		51E316112AFF653100B0C386 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		51E316132B01623400B0C386 /* Nerworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nerworking.swift; sourceTree = "<group>"; };
+		51E316162B0166D200B0C386 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				51E316082AFE977E00B0C386 /* App */,
+				51E316152B01632F00B0C386 /* Services */,
 				51E316092AFE978500B0C386 /* ViewControllers */,
 				51E316102AFF61BF00B0C386 /* Model */,
 				51E3160A2AFE979A00B0C386 /* Resources */,
@@ -78,7 +83,8 @@
 		51E316092AFE978500B0C386 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				51E3160C2AFE982E00B0C386 /* MainViewController.swift */,
+				51E316162B0166D200B0C386 /* MainViewController.swift */,
+				51E3160C2AFE982E00B0C386 /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -105,6 +111,14 @@
 				51E316112AFF653100B0C386 /* Rate.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		51E316152B01632F00B0C386 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				51E316132B01623400B0C386 /* Nerworking.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +191,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51E3160D2AFE982E00B0C386 /* MainViewController.swift in Sources */,
+				51E3160D2AFE982E00B0C386 /* InfoViewController.swift in Sources */,
 				51E316122AFF653100B0C386 /* Rate.swift in Sources */,
 				51E315F52AFE975B00B0C386 /* AppDelegate.swift in Sources */,
+				51E316142B01623400B0C386 /* Nerworking.swift in Sources */,
+				51E316172B0166D200B0C386 /* MainViewController.swift in Sources */,
 				51E315F72AFE975B00B0C386 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let mainVC = MainViewController(collectionViewLayout: UICollectionViewLayout())
+        let mainVC = MainViewController()
         let rootVC = UINavigationController(rootViewController: mainVC)
         window.rootViewController = rootVC
         
