@@ -32,12 +32,11 @@ final class MainViewController: UIViewController {
 
 extension MainViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        "\(countries[row].code) - \(countries[row].name)"
+        "\(countries[row].code)"
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let selectedCountry = row
-        
+        selectedCountry = row
         print("\(selectedCountry) - \(countries[row])")
     }
 }

@@ -10,12 +10,14 @@ import UIKit
 final class InfoViewController: UICollectionViewController {
     
     let country: Country
+    var taxRates: TaxRates!
     
     private let reuseIdentifier = "Cell"
     
     init(country: Country, collectionViewLayout: UICollectionViewLayout) {
         
         self.country = country
+        print("selected country \(self.country)")
         super.init(collectionViewLayout: UICollectionViewLayout())
     }
     
@@ -31,20 +33,26 @@ final class InfoViewController: UICollectionViewController {
         // setup layout
         collectionView.collectionViewLayout = setupFlowLayout()
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(TaxCell.self, forCellWithReuseIdentifier: "\(TaxCell.self)")
         
-        NetworkManager.shared.fetchData(countryCodeISO: country.code)
-        
+        NetworkManager.shared.fetchData(countryCodeISO: country.code) { result in
+            switch result {
+            case .success(let data):
+                self.taxRates = data // FIXME: нужно ли использовать список захвата?
+                self.collectionView.reloadData()
+                self.title = "VAT of \(data.countryName)"
+            case .failure(let error):
+                print(error.localizedDescription)  // FIXME: Alert controller +
+            }
+        }
         setupTitle()
     }
-    
-    
 }
 
 // MARK: - Layout
 private extension InfoViewController {
     func setupTitle() {
-        title = "Hello"
+        title = "Tax rate"
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .systemBackground
     }
@@ -70,14 +78,18 @@ extension InfoViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 7
+//        return 10
+        guard let numberOfRows = taxRates?.otherRates else { return 0 } // TODO: Понять что я делаю с ? знаком
+        return numberOfRows.count + 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.backgroundColor = .lightGray
-        // Configure the cell
-        cell.layer.cornerRadius = 20
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(TaxCell.self)", for: indexPath) as? TaxCell else { return UICollectionViewCell() }
+        cell.configure(
+            data: indexPath.item < 1 ? taxRates.standardRate : taxRates.otherRates[indexPath.item - 1],
+            indexPathItem: indexPath.item,
+            backgroundColor: indexPath.item == 0 ? .systemMint : .lightGray
+        )
         return cell
     }
 }
@@ -94,7 +106,7 @@ extension InfoViewController {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension InfoViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 24, height: 100)
+        CGSize(width: UIScreen.main.bounds.width - 24, height: 70)
     }
     
 }
