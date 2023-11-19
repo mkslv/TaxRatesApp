@@ -33,11 +33,11 @@ final class TaxCell: UICollectionViewCell {
     }
     
     // MARK: - Methods
-    func configure(data: Rate, indexPathItem: Int, backgroundColor: UIColor) {
+    func configure(data: Rate?, indexPathItem: Int, backgroundColor: UIColor) {
         numberLabel.text = String(indexPathItem + 1)
-        classLabel.text = data.classRate
-        descriptionLabel.text = data.types ?? data.descriptionOfTax
-        rateLabel.text = "\(String(format: "%.2f", data.rate))%"
+        classLabel.text = data?.classRate
+        descriptionLabel.text = data?.types ?? data?.descriptionOfTax
+        rateLabel.text = "\(String(format: "%.1f", (data?.rate ?? 0) * 100))%"
         self.backgroundColor = backgroundColor
         commentTaxRateLabel.text = "Tax rate"
     }

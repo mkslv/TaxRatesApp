@@ -11,6 +11,7 @@ final class MainViewController: UIViewController {
     private let infoLabel = UILabel()
     private let countryPicker = UIPickerView()
     private let nextButton = UIButton()
+//    private lazy var alertController = UIAlertController()
     
     private let countries = Country.getListOfCountries()
     private var selectedCountry = 0
@@ -27,6 +28,9 @@ final class MainViewController: UIViewController {
         let nextVC = InfoViewController(country: countries[selectedCountry], collectionViewLayout: UICollectionViewLayout())
         // тут передать данные какая страна
         navigationController?.pushViewController(nextVC, animated: true)
+//        present(alertController, animated: true) {
+//            print(#function)
+//        }
     }
 }
 
@@ -81,8 +85,14 @@ private extension MainViewController {
     func setupLabel() {
         infoLabel.text = "Choose the country and get info about VAT and Sales Taxes in the region"
         infoLabel.numberOfLines = 0
-        
     }
+    
+//    func setupAlertController() {
+//        alertController.title = "Error"
+//        alertController.message = "Something went wrong"
+//        let okButton = UIAlertAction(title: "Ok", style: .default)
+//        alertController.addAction(okButton)
+//    }
 }
 
 private extension MainViewController {
