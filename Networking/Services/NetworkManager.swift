@@ -18,7 +18,7 @@ final class NetworkManager {
     static var shared = NetworkManager()
     private init() {}
     
-    func fetchData(countryCodeISO: String, completion: @escaping (Result<TaxRates?, NetworkError>) -> Void) {
+    func fetchData(countryCodeISO: String, completion: @escaping (Result<TaxRates, NetworkError>) -> Void) {
         // Опред-м URL
         let urlString = "https://api.apilayer.com/tax_data/tax_rates?country=\(countryCodeISO)"
         
@@ -29,18 +29,21 @@ final class NetworkManager {
             
             // Create a URLSession data task
             URLSession.shared.dataTask(with: request) { (data, response, error) in
-                
+
                 // Check if there is data
-                guard let data = data, error == nil else {
+                guard let data = data else {
                     completion(.failure(.noData))
                     return
                 }
-                let taxes = TaxRates.getRates(for: data)
-                if  taxes != nil {
+                print(data)
+
+                do {
+                    let type = try JSONSerialization.jsonObject(with: data)
+                    let taxes = try TaxRates.getRates(from: type)
                     DispatchQueue.main.async {
                         completion(.success(taxes))
                     }
-                } else {
+                } catch {
                     completion(.failure(.decodingError))
                 }
             }.resume() // Resume the task to start the request

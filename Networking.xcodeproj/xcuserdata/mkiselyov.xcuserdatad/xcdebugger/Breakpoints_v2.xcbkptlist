@@ -7,95 +7,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EC68971C-A1CF-4601-B4CC-4042C4311FA4"
+            uuid = "32229DFC-BFB8-4752-8D5B-3C5055F674F0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Networking/ViewControllers/InfoViewController.swift"
+            filePath = "Networking/Services/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "fetchData(countryCodeISO:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "EC68971C-A1CF-4601-B4CC-4042C4311FA4 - a49ff8a1f8a84b28"
+                  uuid = "32229DFC-BFB8-4752-8D5B-3C5055F674F0 - be41d77c32b3391c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Networking.InfoViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Networking.NetworkManager.fetchData(countryCodeISO: Swift.String, completion: (Swift.Result&lt;Networking.TaxRates, Networking.NetworkError&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Networking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mkiselyov/Developer/Homeworks/Module%203/Networking/Networking/ViewControllers/InfoViewController.swift"
+                  urlString = "file:///Users/mkiselyov/Developer/Homeworks/Module%203/Networking/Networking/Services/NetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "2224">
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "312">
                </Location>
                <Location
-                  uuid = "EC68971C-A1CF-4601-B4CC-4042C4311FA4 - a49ff8a1f8a84b28"
+                  uuid = "32229DFC-BFB8-4752-8D5B-3C5055F674F0 - be41d77c32b3391c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Networking.InfoViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Networking.NetworkManager.fetchData(countryCodeISO: Swift.String, completion: (Swift.Result&lt;Networking.TaxRates, Networking.NetworkError&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Networking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mkiselyov/Developer/Homeworks/Module%203/Networking/Networking/ViewControllers/InfoViewController.swift"
+                  urlString = "file:///Users/mkiselyov/Developer/Homeworks/Module%203/Networking/Networking/Services/NetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "880">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "93EE8D57-4D39-4913-A506-ED22A1D5B821"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Networking/ViewControllers/InfoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "93EE8D57-4D39-4913-A506-ED22A1D5B821 - 9cd20dafcb36f3b3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Networking.TaxRates, Networking.NetworkError&gt;) -&gt; () in Networking.InfoViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Networking"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mkiselyov/Developer/Homeworks/Module%203/Networking/Networking/ViewControllers/InfoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "152">
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "328">
                </Location>
                <Location
-                  uuid = "93EE8D57-4D39-4913-A506-ED22A1D5B821 - f50d551dcf25603a"
+                  uuid = "32229DFC-BFB8-4752-8D5B-3C5055F674F0 - be41d77c32b3391c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Networking.TaxRates&gt;, Networking.NetworkError&gt;) -&gt; () in Networking.InfoViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Networking.NetworkManager.fetchData(countryCodeISO: Swift.String, completion: (Swift.Result&lt;Networking.TaxRates, Networking.NetworkError&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Networking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mkiselyov/Developer/Homeworks/Module%203/Networking/Networking/ViewControllers/InfoViewController.swift"
+                  urlString = "file:///Users/mkiselyov/Developer/Homeworks/Module%203/Networking/Networking/Services/NetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "156">
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "344">
                </Location>
             </Locations>
          </BreakpointContent>

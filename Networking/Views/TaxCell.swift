@@ -33,11 +33,11 @@ final class TaxCell: UICollectionViewCell {
     }
     
     // MARK: - Methods
-    func configure(data: Rate?, indexPathItem: Int, backgroundColor: UIColor) {
+    func configure(data: Rate, indexPathItem: Int, backgroundColor: UIColor) {
         numberLabel.text = String(indexPathItem + 1)
-        classLabel.text = data?.classRate
-        descriptionLabel.text = data?.types ?? data?.descriptionOfTax
-        rateLabel.text = "\(String(format: "%.1f", (data?.rate ?? 0) * 100))%"
+        classLabel.text = data.classRate
+        descriptionLabel.text = /*data.types ??*/ data.descriptionOfTax
+        rateLabel.text = "\(String(format: "%.1f", data.rate * 100))%"
         self.backgroundColor = backgroundColor
         commentTaxRateLabel.text = "Tax rate"
     }
@@ -47,7 +47,7 @@ final class TaxCell: UICollectionViewCell {
 private extension TaxCell {
     func setupView() {
         addSubviews()
-        self.layer.cornerRadius = 20 
+        self.layer.cornerRadius = 20
         setupLabels()
         
         setupVerticalContainer(for: nameContainer, primaryLabel: classLabel, secondaryLabel: descriptionLabel)
@@ -121,7 +121,7 @@ private extension TaxCell {
         NSLayoutConstraint.activate([
             
             heightAnchor.constraint(equalToConstant: 70),
-            widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 20), 
+            widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 20),
             
             numberAndNameContainer.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 13),
             numberAndNameContainer.trailingAnchor.constraint(lessThanOrEqualTo: rateMaskView.leadingAnchor, constant: -1),
